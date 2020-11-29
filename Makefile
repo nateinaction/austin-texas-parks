@@ -19,10 +19,6 @@ node_modules:
 start: setup
 	npm run start
 
-.PHONY: test
-test: setup
-	CI=true npm run test
-
 .PHONY: preview
 preview: build
 	wrangler publish
