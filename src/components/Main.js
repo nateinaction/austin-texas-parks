@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Park from './Park';
 
 import parks from '../parks.json';
+import LetterList from './LetterList';
 
 const randomPark = (parks) => (
   parks[Math.floor(Math.random() * parks.length)]
@@ -17,12 +18,7 @@ class Main extends Component {
           name={featuredPark.PARK_NAME}
           address={featuredPark.ADDRESS}
           featured={true} />
-        {parks.map((park, index) => (
-          <Park
-            key={index}
-            name={park.PARK_NAME}
-            address={park.ADDRESS} />
-        ))}
+        <LetterList parks={parks}/>
       </Container>
     );
   }
