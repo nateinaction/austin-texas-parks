@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Park from './Park';
 
 import parks from '../parks.json';
 
-const randomParkName = (parks) => (
-  parks[Math.floor(Math.random() * parks.length)].PARK_NAME
+const randomPark = (parks) => (
+  parks[Math.floor(Math.random() * parks.length)]
 )
 
 class Main extends Component {
   render() {
-    const randomPark = randomParkName(parks)
+    const featuredPark = randomPark(parks)
     return (
       <Container className="parks">
-        <Row className='buttons' >
-          <Col xs={12} md={10}>
-            <strong>Random Park: </strong><a href={'#' + randomPark}>{randomPark}</a>
-          </Col>
-        </Row>
+        <Park
+          name={featuredPark.PARK_NAME}
+          address={featuredPark.ADDRESS}
+          featured={true} />
         {parks.map((park, index) => (
           <Park
             key={index}

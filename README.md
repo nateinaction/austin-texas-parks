@@ -8,4 +8,4 @@ This repository contains the code that runs [https://austin-texas-parks.worldpea
 1. Run `make`
 
 ### Deployment
-Run `make deploy`
+Merge to `main` or run `make deploy`
