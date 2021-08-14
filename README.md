@@ -1,5 +1,5 @@
 # Austin, Texas Parks
-This repository contains the code that runs [https://austin-texas-parks.worldpeace.io/](https://austin-texas-parks.worldpeace.io/).
+This repository contains the code that runs [https://austinparks.n8.gay/](https://austinparks.n8.gay/).
 
 ### Setup
 
