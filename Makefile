@@ -18,11 +18,3 @@ node_modules:
 .PHONY: start
 start: setup
 	npm run start
-
-.PHONY: preview
-preview: build
-	wrangler publish
-
-.PHONY: deploy
-deploy: build
-	wrangler publish -e production
